@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Slip Studio</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        
+        <div class="preview-container">
+            <div class="phone-screen" id="slip-preview">
+                <div class="slip-content">
+                    <div class="success-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h1 class="amount">₹<span id="preview-amount">1,910.00</span></h1>
+                    <p class="paid-to-label">Paid to</p>
+                    <h2 class="recipient-name" id="preview-name">Lalit Dankhara</h2>
+                    <p class="transaction-details">
+                        <span id="preview-app">PhonePe</span> • <span id="preview-upi">lalitdankhara-3@okaxis</span>
+                    </p>
+                    <p class="transaction-date" id="preview-datetime">3 October 2026, 3:05 pm</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="editor-container">
+            <div class="editor-header">
+                <h2>Payment Slip Studio</h2>
+                <p>Edit fields — preview updates instantly</p>
+            </div>
+
+            <div class="form-group">
+                <label for="amount-input"><i class="fa-solid fa-indian-rupee-sign"></i> AMOUNT (₹)</label>
+                <input type="text" id="amount-input" value="1,910.00">
+            </div>
+
+            <div class="form-group">
+                <label for="name-input"><i class="fa-solid fa-user"></i> RECIPIENT NAME</label>
+                <input type="text" id="name-input" value="Lalit Dankhara">
+            </div>
+
+            <div class="form-group">
+                <label for="upi-input"><i class="fa-solid fa-link"></i> UPI ID</label>
+                <input type="text" id="upi-input" value="lalitdankhara-3@okaxis">
+            </div>
+
+            <div class="form-group">
+                <label for="app-input"><i class="fa-solid fa-mobile-screen"></i> PAYMENT APP</label>
+                <input type="text" id="app-input" value="PhonePe">
+            </div>
+
+            <div class="form-group">
+                <label for="theme-select"><i class="fa-solid fa-palette"></i> SLIP THEME</label>
+                <select id="theme-select">
+                    <option value="black">Black</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="date-input"><i class="fa-solid fa-calendar"></i> DATE</label>
+                    <input type="date" id="date-input" value="2026-10-03">
+                </div>
+                <div class="form-group half-width">
+                    <label for="time-input"><i class="fa-solid fa-clock"></i> TIME</label>
+                    <input type="time" id="time-input" value="15:05">
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-primary" id="download-btn">
+                    <i class="fa-solid fa-download"></i> Download Image (PNG)
+                </button>
+                <button class="btn-secondary">
+                    <i class="fa-brands fa-telegram"></i> Contact @dlxn17 (https://t.me/dlxn17) on Telegram
+                </button>
+            </div>
+
+            <p class="footer-text">
+                If you need any changes contact @Najmussym (https://t.me/Najmussym) Via Telegram<br>
+                — click above 👇
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+:root {
+    --bg-dark: #000000;
+    --bg-editor: #121212;
+    --text-light: #ffffff;
+    --text-gray: #a0a0a0;
+    --input-bg: #1e1e1e;
+    --input-border: #333333;
+    --primary-color: #1a73e8; / PhonePe blue style /
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; / Prevent full page scroll /
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/ Preview Section /
+.preview-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-dark);
+    padding: 20px;
+}
+
+.phone-screen {
+    width: 375px;
+    height: 750px;
+    background-color: #000000;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.05);
+}
+
+.slip-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 100px; / Push content up slightly /
+}
+
+.success-icon {
+    width: 64px;
+    height: 64px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.amount {
+    font-size: 42px;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.paid-to-label {
+    color: var(--text-gray);
+    font-size: 15px;
+    margin: 15px 0 0 0;
+}
+
+.recipient-name {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.transaction-details, .transaction-date {
+    color: var(--text-gray);
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+/ Editor Section /
+.editor-container {
+    width: 400px;
+    background-color: var(--bg-editor);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    overflow-y: auto;
+    border-left: 1px solid #222;
+}
+
+.editor-header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.editor-header p {
+    margin: 8px 0 0 0;
+    color: var(--text-gray);
+    font-size: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.half-width {
+    flex: 1;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-gray);
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+}
+
+input, select {
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: var(--text-light);
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+}
+
+/ Style date/time inputs /
+inputtype="date"::-webkit-calendar-picker-indicator,
+inputtype="time"::-webkit-calendar-picker-indicator {
+    filter: invert(1); / Make the calendar icon white /
+    cursor: pointer;
+}
+
+/ Action Buttons /
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+[03-Oct-26 3:21 PM] GTPAI机器人: （续 4/4）
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1565c0;
+}
+
+.btn-secondary {
+    background-color: var(--input-bg);
+    color: var(--text-light);
+    border: 1px solid var(--input-border);
+}
+
+.btn-secondary:hover {
+    background-color: #2a2a2a;
+}
+
+.footer-text {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: auto;
+}
